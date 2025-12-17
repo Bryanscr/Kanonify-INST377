@@ -1,0 +1,29 @@
+{
+  "name": "inst377-week12-sampleapp-fa25",
+  "version": "1.0.0",
+  "description": "INST377 Week 12 Sample App",
+  "homepage": "https://github.com/anmoldash98/inst377-week12-sampleapp-fa25#readme",
+  "bugs": {
+    "url": "https://github.com/anmoldash98/inst377-week12-sampleapp-fa25/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anmoldash98/inst377-week12-sampleapp-fa25.git"
+  },
+  "license": "ISC",
+  "author": "Anmol Dash",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e '*'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.81.1",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.11",
+    "usa-state-validator": "^1.0.6"
+  }
+}
