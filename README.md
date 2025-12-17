@@ -1,1 +1,1 @@
-# inst377-week12-sampleapp-fa25
+# Kanonify
