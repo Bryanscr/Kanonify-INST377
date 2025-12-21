@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kanonify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="nav-home">Kanonify</span>
+      <nav class="nav-links">
+        <a href="/homepage.html">Home</a>
+        <a href="/searchpage.html">Search</a>
+        <a href="/listspage.html">Lists</a>
+        <a href="/aboutpage.html">About</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input
+          id="homeSearchInput"
+          type="text"
+          class="search-input"
+          placeholder="Search"
+        />
+      </div>
+      <div class="profile"></div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TRENDING -->
+    <section class="section">
+      <h2>Trending</h2>
+      <div id="trendingGrid" class="card-row">
+        <!-- JS inserts cards here -->
+      </div>
+    </section>
+
+    <!-- LATEST REVIEWS -->
+    <section class="section">
+      <h2>Latest Reviews</h2>
+      <div id="latestReviews" class="card-row">
+        <!-- JS inserts reviews here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kanonify · INST 377 Project</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+  <script>
+    dayjs.extend(dayjs_plugin_relativeTime);
+  </script>
+  <script src="home.js"></script>
+
+</body>
+</html>

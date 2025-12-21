@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const supabaseClient = require('@supabase/supabase-js');
-const { isValidStateAbbreviation } = require('usa-state-validator');
 const dotenv = require('dotenv');
 
 const app = express();
@@ -17,63 +16,62 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.get('/', (req, res) => {
-  res.sendFile('public/Customers.html', { root: __dirname });
+  res.sendFile('public/homepage.html', { root: __dirname });
 });
 
-app.get('/customers', async (req, res) => {
-  console.log('Attempting to GET all customers');
+app.get("/about", (req, res) => {
+  res.sendFile(__dirname + "/public/aboutpage.html", { root: __dirname });
+});
 
-  const { data, error } = await supabase.from('customer').select();
+app.get("/search", (req, res) => {
+  res.sendFile(__dirname + "/public/searchpage.html", { root: __dirname });
+});
+
+app.get("/lists", (req, res) => {
+  res.sendFile("public/listspage.html", { root: __dirname });
+});
+
+app.get('/reviews', async (req, res) => {
+  const { data, error } = await supabase.from('reviews')
+  .select("*")
+  .order("created_at", {ascending: false})
+  .limit(5);
 
   if (error) {
-    console.log(`Error: ${error}`);
-    res.statusCode = 500;
-    res.send(error);
+    console.error(error);
+    res.status(500).json({message: "Failed to fetch reviews"});
     return;
-  } else {
-    res.send(data);
   }
+  res.json(data);
 });
 
-app.post('/customer', async (req, res) => {
-  console.log('Adding customer');
-  console.log('Request:', req.body);
+app.post('/reviews', async (req, res) => {
+  console.log("Incoming review:", req.body);
 
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const state = req.body.state;
-
-  if (!isValidStateAbbreviation(state)) {
-    console.error(`State: ${state} is Invalid`);
-    res.statusCode = 400;
-    const errorJSON = {
-      message: `${state} is ano a valid 2 Letter state abbreviaton`,
-    };
-    res.header('Content-type', 'application/json');
-    res.send(JSON.stringify(errorJSON));
-    return;
-  }
+  const { title, media_type, rating, review_text, poster_url } = req.body;
 
   const { data, error } = await supabase
-    .from('customer')
+    .from('reviews')
     .insert({
-      customer_first_name: firstName,
-      customer_last_name: lastName,
-      customer_state: state,
+      title,
+      media_type,
+      rating,
+      review_text,
+      poster_url
     })
     .select();
 
   if (error) {
-    console.log(`Error: ${error}`);
-    res.statusCode = 500;
-    res.send(error);
-    return;
-  } else {
-    res.send(data);
+    console.error("🔥 SUPABASE FETCH ERROR:", error);
+    return res.status(500).json({
+      message: "Failed to save review",
+      error: error.message,
+    });
   }
-  res.send(req.body);
+
+  res.json(data);
 });
 
-app.listen(port, () => {
-  console.log('App is available on port:', port);
-});
+module.exports = app;
+
+

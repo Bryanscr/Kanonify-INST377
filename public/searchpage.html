@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Search | Kanonify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="nav-home">Kanonify</span>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/searchpage.html" class="active">Search</a>
+        <a href="/aboutpage.html">About</a>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search"
+        />
+      </div>
+      <div class="profile"></div>
+    </div>
+  </nav>
+
+  <main class="content search-layout">
+
+    <!-- LEFT: RESULTS -->
+    <section class="search-results">
+      <h1>Search Results</h1>
+      <div class="light-divider"></div>
+
+      <div id="wikiResults"></div>
+      <div id="booksResults"></div>
+      <div id="moviesResults"></div>
+      <div id="showsResults"></div>
+      <div id="animeResults"></div>
+    </section>
+  
+    <!-- RIGHT: FILTERS -->
+    <aside class="filter-panel">
+      <h2>Filter By</h2>
+      <div class="light-divider"></div>
+  
+      <label>
+        <input type="checkbox" id="filterBooks" checked />
+        Books
+      </label>
+  
+      <label>
+        <input type="checkbox" id="filterMovies" checked />
+        Movies
+      </label>
+  
+      <label>
+        <input type="checkbox" id="filterShows" checked />
+        Shows
+      </label>
+  
+      <label>
+        <input type="checkbox" id="filterAnime" checked />
+        Anime
+      </label>
+    </aside>
+  
+  </main>  
+
+  <footer class="footer">
+    © 2025 Kanonify · INST 377 Project
+  </footer>
+
+  <script src="search.js"></script>
+
+</body>
+</html>

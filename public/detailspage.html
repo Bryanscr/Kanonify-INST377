@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Details | Kanonify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="nav-home">Kanonify</span>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/searchpage.html">Search</a>
+        <a href="/aboutpage.html">About</a>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search"
+          onclick="window.location.href='/searchpage.html'"
+        />
+      </div>
+      <div class="profile"></div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="content details-layout">
+
+    <!-- DETAILS CARD -->
+    <section class="details-card">
+
+      <!-- POSTER -->
+      <img
+        id="detailsPoster"
+        class="details-poster"
+        src="https://via.placeholder.com/200x300?text=No+Image"
+        alt="Poster"
+      />
+
+      <!-- MAIN INFO -->
+      <div class="details-info">
+        <h1 id="detailsTitle">Loading...</h1>
+        <p id="detailsType" class="details-type"></p>
+
+        <div class="light-divider"></div>
+
+        <p id="detailsDescription">Loading description...</p>
+      </div>
+
+      <!-- RIGHT META -->
+      <div class="details-meta">
+
+        <!-- RATING -->
+        <div class="rating-section">
+          <h3>Rating</h3>
+
+          <div class="stars">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+
+          <p class="rating-note">No ratings yet</p>
+        </div>
+
+        <div class="light-divider"></div>
+
+        <!-- REVIEWS -->
+        <div class="reviews-section">
+          <h3>Reviews</h3>
+
+          <div id="reviewsList"></div>
+
+          <textarea
+            id="reviewText"
+            placeholder="Write your review here..."
+            rows="4"
+          ></textarea>
+
+          <button id="submitReview" class="review-button">
+            ✍️ Submit Review
+          </button>
+        </div>
+
+      </div> 
+
+    </section>
+
+    <!-- ORIGINAL SOURCE -->
+    <section class="original-source-section">
+      <h2>Original Source</h2>
+      <div class="light-divider"></div>
+
+      <p id="originalSourceText">
+        Loading source information...
+      </p>
+
+      <a
+        id="originalSourceLink"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="wiki-link"
+      >
+        Read more on Wikipedia
+      </a>
+    </section>
+
+    <div class="light-divider"></div>
+
+    <!-- LIST CONTROLS -->
+    <section class="list-controls">
+      <h3>Add to List</h3>
+      <div class="light-divider"></div>
+
+      <button data-list="watching">📺 Watching</button>
+      <button data-list="reading">📚 Want to Read</button>
+      <button data-list="completed">✅ Completed</button>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 Kanonify · INST 377 Project
+  </footer>
+
+  <script src="details.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+  

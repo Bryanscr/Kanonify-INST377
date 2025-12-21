@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About | Kanonify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="nav-home">Kanonify</span>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/listspage.html">Lists</a>
+        <a href="/aboutpage.html" class="active">About</a>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search" class="search-input" />
+      </div>
+      <div class="profile"></div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="content about-content">
+
+    <h1>About Kanonify</h1>
+
+    <p class="about-intro">
+      Kanonify is a media discovery and review platform designed to help users
+      explore, track, and review books, manga, anime, movies, and TV shows — all
+      in one place.
+    </p>
+
+    <div class="about-divider"></div>
+
+    <section class="about-section">
+      <h2>What Can You Do?</h2>
+      <ul>
+        <li>Search for books, shows, movies, manga, and anime</li>
+        <li>View trending titles and recent reviews</li>
+        <li>Create and manage personalized lists</li>
+        <li>Read and write reviews across different media types</li>
+      </ul>
+    </section>
+
+    <div class="about-divider"></div>
+
+    <section class="about-section">
+      <h2>Who Is It For?</h2>
+      <p>
+        Kanonify is designed for people who enjoy multiple forms of storytelling
+        and want a single platform to connect adaptations with their original
+        sources. Users can track what they watch, read, or plan to explore across
+        books, manga, anime, movies, and TV shows.
+      </p>
+    </section>
+
+    <div class="about-divider"></div>
+
+    <section class="about-section">
+      <h2>Technology</h2>
+      <p>
+        This project was created as part of INST 377 and uses HTML, CSS,
+        JavaScript, Node.js, and Supabase for data storage. External APIs such as
+        TMDB and Jikan are used to retrieve media information.
+      </p>
+    </section>
+
+    <div class="about-divider"></div>
+
+    <!-- CHART SECTION -->
+    <section class="about-section">
+      <h2>Review Breakdown</h2>
+      <p>
+        This chart shows the number of user reviews submitted for each type of
+        media available on Kanonify.
+      </p>
+
+      <canvas id="reviewsChart" width="400" height="200"></canvas>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 Kanonify · INST 377 Project
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="about.js"></script>
+
+</body>
+</html>
+

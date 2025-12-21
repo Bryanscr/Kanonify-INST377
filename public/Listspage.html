@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Lists | Kanonify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="nav-home">Kanonify</span>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/searchpage.html">Search</a>
+        <a href="/listspage.html" class="active">Lists</a>
+        <a href="/aboutpage.html">About</a>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search"
+          onclick="window.location.href='/searchpage.html'"
+        />
+      </div>
+      <div class="profile"></div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <h1>My Lists</h1>
+    <div class="light-divider"></div>
+
+    <!-- WATCHING -->
+    <section class="list-section">
+      <h2>📺 Watching</h2>
+      <div class="light-divider"></div>
+      <div id="watchingList" class="list-items"></div>
+    </section>
+
+    <!-- READING -->
+    <section class="list-section">
+      <h2>📚 Want to Read</h2>
+      <div class="light-divider"></div>
+      <div id="readingList" class="list-items"></div>
+    </section>
+
+    <!-- COMPLETED -->
+    <section class="list-section">
+      <h2>✅ Completed</h2>
+      <div class="light-divider"></div>
+      <div id="completedList" class="list-items"></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 Kanonify · INST 377 Project
+  </footer>
+
+  <script src="lists.js"></script>
+</body>
+</html>
