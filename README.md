@@ -125,5 +125,6 @@ Request Body:
 - mprove mobile responsiveness
 - Add filtering and sorting options for reviews
 - Expand original source linking to specific books, volumes, or chapters
+- Display dynamic average ratings on the details page
 
 
