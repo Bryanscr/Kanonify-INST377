@@ -11,7 +11,7 @@
     "url": "git+https://github.com/anmoldash98/inst377-week12-sampleapp-fa25.git"
   },
   "license": "ISC",
-  "author": "Anmol Dash",
+  "author": "Bryan Cristales Rivas",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
