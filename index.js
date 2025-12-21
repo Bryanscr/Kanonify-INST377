@@ -28,7 +28,7 @@ app.get("/search", (req, res) => {
 });
 
 app.get("/lists", (req, res) => {
-  res.sendFile(__dirname + "public/listspage.html", { root: __dirname });
+  res.sendFile(__dirname + "/public/listspage.html", { root: __dirname });
 });
 
 app.get('/reviews', async (req, res) => {
