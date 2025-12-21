@@ -16,19 +16,23 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.get('/', (req, res) => {
-  res.sendFile('public/homepage.html', { root: __dirname });
+  res.sendFile(__dirname + '/public/homepage.html');
 });
 
-app.get("/about", (req, res) => {
-  res.sendFile(__dirname + "/public/aboutpage.html", { root: __dirname });
+app.get('/about', (req, res) => {
+  res.sendFile(__dirname + '/public/aboutpage.html');
 });
 
-app.get("/search", (req, res) => {
-  res.sendFile(__dirname + "/public/searchpage.html", { root: __dirname });
+app.get('/search', (req, res) => {
+  res.sendFile(__dirname + '/public/searchpage.html');
 });
 
-app.get("/lists", (req, res) => {
-  res.sendFile(__dirname + "/public/listspage.html", { root: __dirname });
+app.get('/lists', (req, res) => {
+  res.sendFile(__dirname + '/public/listspage.html');
+});
+
+app.get('/listspage.html', (req, res) => {
+  res.sendFile(__dirname + '/public/listspage.html');
 });
 
 app.get('/reviews', async (req, res) => {
